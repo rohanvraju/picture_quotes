@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: rgba(255, 255, 255, 0.904);
+}
+
+/* Image Container */
+.image-container{
+    margin: 10px 30%;
+    position: relative;
+    /* display: inline-block; */
+    /* text-align: center; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+
+.image-container img{
+    width: 100%;
+    margin-top: 5px;
+    /* display: block; */
+}
+
+/* Text Container (quote and author) */
+.text-container{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    text-align: center;
+    font-family: Playfair Display, 'sans-serif';
+    font-size: large;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+/* Quote Container */
+.quote-text{
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; */
+    font-weight: 500;
+}
+
+/* Author container */
+.author-text{
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: 400;
+}
