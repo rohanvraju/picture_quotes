@@ -1,8 +1,10 @@
 const accessKey = 'S3126JKadtCEfcq-Uz4aLSKlLJhKVCUVw9zDV5Rmum8';
-const count = 10;
+let count = 10;//load only 5 images on initial load
 const imageApiUrl = `https://api.unsplash.com/photos/random/?client_id=${accessKey}&count=${count}`;
 
 const quoteApiUrl = 'https://type.fit/api/quotes';
+
+const loader = document.getElementById("loader");
 
 let apiQuotes = [];
 let imageArray = [];
@@ -14,6 +16,7 @@ function loadMoreImages(){
     imagesLoaded++;
     if(imagesLoaded === count){
         imagesLoaded = 0;
+        loader.hidden = true;
         ready = true;
     }
 }
@@ -65,12 +68,6 @@ function displayPhotosWithQuotes(){
         authorText.setAttribute('class', 'author-text');
         //let author = 'AUTHOOORRRR';
         authorText.innerText = quote.author;
-        
-        //quote text
-        // let quote = 'example quote';
-        // const quoteSpan = document.createElement('span');
-        // quoteSpan.setAttribute('id', 'quote');
-        // quoteSpan.innerText = quote;
         
         //quoteText.appendChild(quoteSpan);
         textContainer.appendChild(quoteText);
